@@ -13,6 +13,8 @@ class home_page extends StatelessWidget {
       child: Container(
         child: Text("welcome !!"),
       ),
-    ));
+      ),
+     drawer: Drawer(),
+    );
   }
 }
