@@ -9,12 +9,12 @@ class home_page extends StatelessWidget {
       appBar: AppBar(
         title: Text("Home"),
       ),
-        body: Center(
-      child: Container(
-        child: Text("welcome !!"),
+      body: Center(
+        child: Container(
+          child: Text("welcome !!"),
+        ),
       ),
-      ),
-     drawer: Drawer(),
+      drawer: Drawer(),
     );
   }
 }
