@@ -3,6 +3,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import "package:flutter_dec_17/utilities/routes.dart";
 
 class loginPage extends StatelessWidget {
   const loginPage({Key? key}) : super(key: key);
@@ -10,6 +11,7 @@ class loginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
+    child:SingleChildScrollView(
         child: Column(
       children: [
         SizedBox(
@@ -25,7 +27,7 @@ class loginPage extends StatelessWidget {
         Text(
           "welcome",
           style: TextStyle(
-              fontSize: 25,
+              fontSize: 28,
               fontWeight: FontWeight.bold,
               color: Colors.indigoAccent),
         ),
@@ -43,16 +45,19 @@ class loginPage extends StatelessWidget {
                     hintText: "Enter Password", labelText: "Password"),
               ),
               SizedBox(
-                height: 35,
+                height: 40,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context,MyRoutes.homeRoute);
+                },
+                style: TextButton.styleFrom(minimumSize: Size(85, 40)),
                 child: Text("login"),
               )
             ],
           ),
         )
       ],
-    ));
+    )));
   }
 }
